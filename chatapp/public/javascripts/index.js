@@ -6,8 +6,8 @@ function enter() {
     const userName = document.getElementById('userName').value;
     // ユーザ名が未入力でないかチェックする
     if (userName !=""){
-      alart("ERR0R")
+      $('form').submit();
     }else{
-    $('form').submit();
+    alart("ERR0R")
     }
 }
