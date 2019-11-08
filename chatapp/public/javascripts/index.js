@@ -6,9 +6,7 @@ function enter() {
     const userName = $('userName').val();
     return userName;
     // ユーザ名が未入力でないかチェックする
-    if (userName == ''){
-      alert("ユーザ名を入力してください。");
-    }else{
+
     $('form').submit();
 	}
 }
