@@ -8,6 +8,6 @@ function enter() {
     if (userName !==""){
       $('form').submit();
     }else{
-    alart('ERR0R')
+      alart('ERR0R');
     }
 }
