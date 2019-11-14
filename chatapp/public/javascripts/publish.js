@@ -15,15 +15,14 @@ function getValueM() {
 
 // 投稿メッセージをサーバに送信する
 function publish() {
-  
+  console.log('クライアントの入力値：' + message);
     // ユーザ名を取得
     const userName = getValueN();
     // 入力されたメッセージを取得
     const message = getValueM();
     // 投稿内容を送信
-    socket.emit('sendNameEvent', userName);
+    //socket.emit('sendNameEvent', userName);
     socket.emit('sendMessageEvent', message);
-    console.log('クライアントの入力値：' + message);
     return false;
 }
 
