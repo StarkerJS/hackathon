@@ -5,9 +5,14 @@
     <div class="row">
         <form method="post" action="/">
             <div class="room-login_user">
-                ログインユーザ：さん
+              <script src="../public/javascripts/index.js">
+                socket.on('userName',function(userName){
+                  const userName = userName;
+                })
+                ログインユーザ：{{userName}}さん
                 <input id="userName" type="hidden" value="userName">
             </div>
+            </script>
             <div class="room-message">
                 <textarea id="message" rows="4" class="room-message_textarea" placeholder="投稿文を入力してください"></textarea>
             </div>

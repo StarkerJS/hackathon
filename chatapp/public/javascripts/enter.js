@@ -4,7 +4,7 @@
 // 入力されたユーザ名を取得する
 const userName = 'userName';
 // 入室メッセージイベントを送信する
-  socket.emit('userName', message);
+  socket.emit('userName', userName);
 
 // サーバから受信した入室メッセージを画面上に表示する
 socket.on('userName', function (data) {
