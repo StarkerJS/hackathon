@@ -1,7 +1,7 @@
 'use strict';
 
 // socket.ioの処理開始
-const socket = io.connect();
+//const socket = io.connect();
 
 function getValueN() {
     const textNValue = $('#userName').val();
@@ -15,6 +15,7 @@ function getValueM() {
 
 // 投稿メッセージをサーバに送信する
 function publish() {
+  
     // ユーザ名を取得
     const userName = getValueN();
     // 入力されたメッセージを取得
@@ -22,6 +23,7 @@ function publish() {
     // 投稿内容を送信
     socket.emit('sendNameEvent', userName);
     socket.emit('sendMessageEvent', message);
+    console.log('クライアントの入力値：' + message);
     return false;
 }
 
