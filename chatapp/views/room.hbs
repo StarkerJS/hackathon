@@ -5,14 +5,7 @@
     <div class="row">
         <form method="post" action="/">
             <div class="room-login_user">
-              ログインユーザ：
-              <script src="../public/javascripts/index.js">
-                socket.on('userName',function(userName){
-                  const userName = userName;
-                  $('#thread').prepend(userName);
-                })
-              </script>
-                さん
+              ログインユーザ：{{userName}}さん
                 <input id="userName" type="hidden" value="userName">
             </div>
 
