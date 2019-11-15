@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports = function (socket, io) {
+  //console.log("publishがリクエストされている");
     // 投稿メッセージを送信する
     socket.on('sendMessageEvent', function (data) {
 
