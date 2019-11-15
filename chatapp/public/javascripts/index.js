@@ -3,7 +3,8 @@
 // チャットルームに入室する
 function enter() {
     // 入力されたユーザ名を取得する
-    const userName = document.getElementById('userName').value;
+    const userName = $('#userName').val();
+    console.log('Form Check:' + userName);
     // ユーザ名が未入力でないかチェックする
     if (userName !==''){
       $('form').submit();
