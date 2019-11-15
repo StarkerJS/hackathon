@@ -22,7 +22,7 @@ function publish() {
     console.log('クライアントの入力値：' + message);
     // 投稿内容を送信
     //socket.emit('sendNameEvent', userName);
-    socket.emit('sendMessageEvent', message);
+    socket.emit('sendMessageEvent', userName+'さん：'+message);
     return false;
 }
 
