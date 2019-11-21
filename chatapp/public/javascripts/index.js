@@ -9,7 +9,7 @@ function enter() {
       console.log('[Name Check] <Success> UserName:'+userName);
       $('form').submit();
     }else{
-      console.log('[Name Check] <Failure>');
+      console.log('[Name Check] <Failure> UserName:Null');
       alert('ユーザ名を入力してください。');
     }
 }

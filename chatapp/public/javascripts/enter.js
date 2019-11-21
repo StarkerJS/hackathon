@@ -1,22 +1,23 @@
 'use strict';
-
-//function getValueN() {
-//    const textNValue = $('#userName').val();
-//    return textNValue;
-//}
-//http.createServer(function(req, res) {
-//    var userName = '';
+/*
+function getValueN() {
+    const textNValue = $('#userName').val();
+    return textNValue;
+}
+http.createServer(function(req, res) {
+    var userName = '';
       //namedata変数に入れ込み
-//      req.on('userName', function(chunk) {
-//        userName += chunk
-//      });
+      req.on('userName', function(chunk) {
+        userName += chunk
+      });
       //endイベント
-//      req.on('end', function() {
-//        console.log(userName);
-//        res.end();
-//      });
-//});
-//const userName = createServer();
+      req.on('end', function() {
+        console.log(userName);
+        res.end();
+      });
+});
+const userName = createServer();
+*/
 
 // 入室メッセージをサーバに送信する
 // ユーザ名取得
