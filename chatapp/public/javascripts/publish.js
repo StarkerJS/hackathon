@@ -40,7 +40,7 @@ function publish() {
       return false;
     }
 }
-
+/////aoaajfaeijfia
 // サーバから受信した投稿メッセージを画面上に表示する
 socket.on('receiveMessageEvent', function (data) {
   const userName = data[0];
