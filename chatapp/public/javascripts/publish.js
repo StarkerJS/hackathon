@@ -26,10 +26,12 @@ function publish() {
     // ユーザ名を取得
     const userName = getValueN();
     // 入力されたメッセージを取得
-    if( const message = getValueM() ){
+    const message = getValueM()
+    if(message){
       // 投稿内容を送信
       //socket.emit('sendNameEvent', userName);
       const nameMessage = [userName,message];
+      console.log(nameMessage);
       socket.emit('sendMessageEvent', nameMessage);
       return false;
     }
@@ -37,5 +39,5 @@ function publish() {
 
 // サーバから受信した投稿メッセージを画面上に表示する
 socket.on('receiveMessageEvent', function (data) {
-    $('#thread').prepend('<div class="room_message bms_left"><div class="bms_message_box"><div class="bms_message_content"><div class="bms_message_text">' + data +'</div></div></div></div><div class="bms_clear"></div>');
+    $('#thread').prepend('<p>' + data +'</p>');
 });
