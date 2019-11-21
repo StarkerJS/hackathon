@@ -17,6 +17,8 @@ function publish() {
     // 入力されたメッセージを取得
     const message = getValueM();
     console.log('クライアントの入力値：' + message);
+    //textareaを空にする
+    $('#message').val("");
     // 投稿内容を送信
     //socket.emit('sendNameEvent', userName);
     socket.emit('sendMessageEvent', userName+'さん：'+message);
