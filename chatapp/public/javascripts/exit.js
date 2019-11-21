@@ -19,6 +19,7 @@ function exitRoom() {
 
 // サーバから受信した退室メッセージを画面上に表示する
 socket.on('outuserName', function (data) {
+  Push.create(data +'さんが退室しました。');
   $('#thread').prepend('<div class="message_center"><div class="outmessage_box">'+ data +'さんが退室しました。</div></div><div class="message_clear"></div>');
 
 });

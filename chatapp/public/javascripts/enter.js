@@ -27,5 +27,6 @@ const inuserName = $('#userName').val();
 socket.emit('inuserName', inuserName);
 // サーバから受信した入室メッセージを画面上に表示する
 socket.on('inuserName', function (data) {
+    Push.create(data +'さんが入室しました。');
     $('#thread').prepend('<div class="message_center"><div class="inmessage_box">'+ data +'さんが入室しました。</div></div><div class="message_clear"></div>');
 });
