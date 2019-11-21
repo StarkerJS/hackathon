@@ -10,7 +10,15 @@ function getValueN() {
 
 function getValueM() {
     const textMValue = $('#message').val();
-    return textMValue;
+    console.log('クライアントの入力値：' + textMValue);
+    if(textMValue !== ""){
+      //textareaを空にする
+      $('#message').val("");
+      return textMValue;
+    }else{
+      alert("文字を入力してください。")
+      return false;
+    }
 }
 
 // 投稿メッセージをサーバに送信する
@@ -18,17 +26,11 @@ function publish() {
     // ユーザ名を取得
     const userName = getValueN();
     // 入力されたメッセージを取得
-    const message = getValueM();
-    if(message!==""){
-      console.log('クライアントの入力値：' + message);
-      //textareaを空にする
-      $('#message').val("");
+    if( const message = getValueM() ){
       // 投稿内容を送信
       //socket.emit('sendNameEvent', userName);
-      socket.emit('sendMessageEvent', userName+'さん：'+message);
-      return false;
-    }else{
-      alert("文字を入力してください。")
+      const nameMessage = [userName,message];
+      socket.emit('sendMessageEvent', nameMessage);
       return false;
     }
 }
