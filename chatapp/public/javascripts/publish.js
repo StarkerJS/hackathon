@@ -35,5 +35,6 @@ function publish() {
 
 // サーバから受信した投稿メッセージを画面上に表示する
 socket.on('receiveMessageEvent', function (data) {
-    $('#thread').prepend('<p>' + data +'</p>');
+    $('#thread').prepend('<div class="room_message bms_left"><div class="bms_message_box"><div class="bms_message_content"><div class="bms_message_text">' + data +'</div></div></div></div><div class="bms_clear"></div>');
+>>>>>>> Stashed changes
 });
