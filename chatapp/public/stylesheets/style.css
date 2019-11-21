@@ -10,7 +10,7 @@ a {
 }
 
 div {
-    margin: 20px 0px;
+    margin: 0px 0px;
 }
 
 .row {
@@ -47,7 +47,7 @@ div {
  * チャットルーム画面（room.hbs）に関する設定
  */
 .room-login_user {
-
+    text-align: center;
  }
 
  .room-footer {
@@ -116,10 +116,11 @@ div {
   background-color: #eee;
   box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2) inset;
 }
+
 .room_message{
   margin: 0px;
   padding: 14px 14px;
-  font-size: 11px;
+  font-size: 12px;
   word-wrap: break-word;
   white-space: normal;
 }
@@ -132,33 +133,35 @@ div {
 
 }
 
-.your_container{
-    height:350px;
+.container {
+    height: 450px;
     width: 100%;
 }
 
-.bms_messages_container{
+.thread_container {
     height: 100%;
     width: 100%;
     background-color: #eee;
 }
 
-.bms_message_box{
+.message_box{
     margin-top: 0px;
-    max-width: 90%;
-    font-size: 12px;
+    max-width: 100%;
+    font-size: 14px;
 }
 
-.bms_message_content{
-    padding: 0px;
+.message_content{
+    padding: 10px;
+    text-align: left;
 }
 /*左*/
-.bms_left {
+.message_left {
     float: left;
     line-height: 1.3em;
+    text-align: left;
 }
 
-.bms_left .bms_message_box {
+.message_left .message_box {
     color: #333;
     background: #fff;
     border: 2px solid #fd7e00;
@@ -166,12 +169,13 @@ div {
     margin-right: 50px;
 }
 /*右*/
-.bms_right {
+.message_right {
     float: right;
     line-height: 1.3em;
+    text-align: right;
 }
 
-.bms_right .bms_message_box {
+.message_right .message_box {
       color: #fff;
       background: #fd7e00;
       border: 2px solid #fd7e00;
@@ -179,22 +183,46 @@ div {
       margin-left: 50px;
 }
 
+.message_right .memo_box {
+      color: #fff;
+      background: #4169e1;
+      border: 2px solid #4169e1;
+      border-radius: 15px 15px 0px 15px;
+      margin-left: 50px;
+}
+
 /*中央*/
-.bms_center {
-    position: relative;
-    overflow: hidden;
+.message_center {
+    margin-right:auto;
+    margin-left:auto;
     line-height: 1.3em;
     text-align: center;
-    font-size: 15px;
+    font-size: 14px;
+    margin: 0px;
+    padding: 14px 14px;
+    word-wrap: break-word;
+    white-space: normal;
 }
 
-.bms_center .bms_message_box {
-      color: #333;
+.inmessage_box .outmessage_box {
+    margin-top: 0px;
+    max-width: 100%;
+}
+
+.message_center .inmessage_box {
+      color: #fd7e00;
       background: #fff;
-      border: 2px solid #fff;
-      border-radius: 0px 0px 0px 0px;
+      border: 2px solid #fd7e00;
+      border-radius: 3px 3px 3px 3px;
 }
 
-.bms_clear {
+.message_center .outmessage_box {
+      color: #4169e1;
+      background: #fff;
+      border: 2px solid #4169e1;
+      border-radius: 3px 3px 3px 3px;
+}
+
+.message_clear {
       clear: both;
 }

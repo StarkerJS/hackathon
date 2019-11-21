@@ -48,8 +48,8 @@ socket.on('receiveMessageEvent', function (data) {
   const send_time = data[2];
 
   if(userName == getValueN()){
-    $('#thread').prepend(' <div class="room_message bms_right">'+ userName +'@'+ send_time +'<div class="bms_message_box"><div class="bms_message_content"><div class="bms_message_text">'+ message +'</div></div></div></div><div class="bms_clear"></div>');
+    $('#thread').prepend(' <div class="room_message message_right">'+ userName +'＠'+ send_time +'<div class="message_box"><div class="message_content">'+ message +'</div></div></div><div class="message_clear"></div>');
   }else{
-    $('#thread').prepend(' <div class="room_message bms_left">'+ userName +'@'+ send_time +'<div class="bms_message_box"><div class="bms_message_content"><div class="bms_message_text">'+ message +'</div></div></div></div><div class="bms_clear"></div>');
+    $('#thread').prepend(' <div class="room_message message_left">'+ userName +'＠'+ send_time +'<div class="message_box"><div class="message_content">'+ message +'</div></div></div><div class="message_clear"></div>');
   }
 });

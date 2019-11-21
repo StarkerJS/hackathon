@@ -8,7 +8,7 @@ function exit() {
     // 退室メッセージイベントを送信する
     socket.emit('outuserName', outuserName);
     // 150ms遅延
-    window.setTimeout(exitRoom,150);
+    window.setTimeout(exitRoom,300);
 }
 
 //退室
@@ -19,5 +19,6 @@ function exitRoom() {
 
 // サーバから受信した退室メッセージを画面上に表示する
 socket.on('outuserName', function (data) {
-    $('#thread').prepend('<p>' + data + 'さんが退室しました。</p>');
+  $('#thread').prepend('<div class="message_center"><div class="outmessage_box">'+ data +'さんが退室しました。</div></div><div class="message_clear"></div>');
+
 });
