@@ -65,7 +65,7 @@ div {
 
 .room-message_textarea {
   width: calc(100%);
-  line-height: 16px;
+  line-height: 12px;
   height: 48px;
   padding: 14px 6px 0px 6px;
   border: 1px solid #ccc;
@@ -146,7 +146,7 @@ div {
 .bms_message_box{
     margin-top: 0px;
     max-width: 90%;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .bms_message_content{
@@ -177,6 +177,22 @@ div {
       border: 2px solid #fd7e00;
       border-radius: 15px 15px 0px 15px;
       margin-left: 50px;
+}
+
+/*中央*/
+.bms_center {
+    position: relative;
+    overflow: hidden;
+    line-height: 1.3em;
+    text-align: center;
+    font-size: 15px;
+}
+
+.bms_center .bms_message_box {
+      color: #333;
+      background: #fff;
+      border: 2px solid #fff;
+      border-radius: 0px 0px 0px 0px;
 }
 
 .bms_clear {

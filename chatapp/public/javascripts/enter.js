@@ -28,4 +28,5 @@ socket.emit('inuserName', inuserName);
 // サーバから受信した入室メッセージを画面上に表示する
 socket.on('inuserName', function (data) {
     $('#thread').prepend('<p>' + data + 'さんが入室しました。</p>');
+    $('#thread').prepend('<div class="room_message bms_center"><div class="bms_message_box"><div class="bms_message_content"><div class="bms_message_text">'+ data +'さんが入室しました。</div></div></div></div><div class="bms_clear"></div>');
 });
