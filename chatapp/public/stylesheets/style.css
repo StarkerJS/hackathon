@@ -122,7 +122,6 @@ div {
   font-size: 11px;
   word-wrap: break-word;
   white-space: normal;
-
 }
 
 .room-exit {
@@ -156,7 +155,7 @@ div {
 /*左*/
 .bms_left {
     float: left;
-    line-height: 0.5em;
+    line-height: 1.3em;
 }
 
 .bms_left .bms_message_box {
