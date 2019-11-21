@@ -7,7 +7,7 @@ function memo() {
     // 入力されたメッセージを取得
     const message = $('#message').val();
     // メモの内容を表示
-    $('#thread').prepend('<p>memo＞＞' + message +'</p>');
+    $('#thread_me').prepend('<p>memo＞＞' + message +'</p>');
 
     return false;
 }

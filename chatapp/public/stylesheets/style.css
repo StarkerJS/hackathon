@@ -50,16 +50,54 @@ div {
 
  }
 
+ .room-footer {
+     background-color:#eee;
+     border-right: 1px solid #ddd;
+     border-left: 1px solid #ddd;
+     border-bottom: 1px solid #ddd;
+     height: 80px;
+     padding: 4px;
+ }
+
 .room-message {
 
 }
 
 .room-message_textarea {
-    width: 500px;
+  width: calc(100%);
+  line-height: 16px;
+  height: 48px;
+  padding: 14px 6px 0px 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: left;
+  box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.2) inset;
+  box-sizing: border-box;
+    /*width: 500px;*/
 }
 
 .room-submit {
+/*
+  width: 72px;
+  height: 48px;
+  font-size: 16px;
+  line-height: 3em;
+  float: right;
+  color: #fff;
+  font-weight: bold;
+  background: #bcbcbc;
+  text-align: center;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  box-sizing: border-box;
+  */
+}
 
+.room-submit:hover {
+  /*
+        background: #13178E;
+        cursor: pointer;
+  */
 }
 
 .room-publish_button {
@@ -71,6 +109,18 @@ div {
 }
 
 .room-thread {
+  overflow: auto;
+  height:100%;
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  background-color: #eee;
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2) inset;
+
+  margin: 0px;
+  padding: 0 14px;
+  font-size: 11px;
+  word-wrap: break-word;
+  white-space: normal;
 
 }
 
@@ -80,4 +130,55 @@ div {
 
 .room-exit_button {
 
+}
+
+.your_container{
+    height:350px;
+    width: 100%;
+}
+
+.bms_messages_container{
+    height: 100%;
+    width: 100%;
+    background-color: #eee;
+}
+
+.bms_message_box{
+    margin-top: 0px;
+    max-width: 100%;
+    font-size: 14px;
+}
+
+.bms_message_content{
+    padding: 0px;
+}
+/*左*/
+.bms_left {
+    float: left;
+    line-height: 0.5em;
+}
+
+.bms_left .bms_message_box {
+    color: #333;
+    background: #fff;
+    border: 2px solid #fd7e00;
+    border-radius: 15px 15px 15px 0px;
+    margin-right: 50px;
+}
+/*右*/
+.bms_right {
+    float: right;
+    line-height: 1.3em;
+}
+
+.bms_right .bms_message_box {
+      color: #fff;
+      background: #fd7e00;
+      border: 2px solid #fd7e00;
+      border-radius: 15px 15px 0px 15px;
+      margin-left: 50px;
+}
+
+.bms_clear {
+      clear: both;
 }
