@@ -118,7 +118,7 @@ div {
 }
 .room_message{
   margin: 0px;
-  padding: 0 14px;
+  padding: 14px 14px;
   font-size: 11px;
   word-wrap: break-word;
   white-space: normal;
@@ -145,7 +145,7 @@ div {
 
 .bms_message_box{
     margin-top: 0px;
-    max-width: 100%;
+    max-width: 90%;
     font-size: 14px;
 }
 
