@@ -1,7 +1,24 @@
 'use strict';
-var date = new Date();
+
+//休止機能
+function pause(){
+  //休止
+  if ($('#pause_btn').attr('aria-pressed') === 'false'){
+    document.getElementById('room_thread').style.visibility = 'hidden';
+    document.getElementById('message').style.visibility = 'hidden';
+    document.getElementById('submit_btn').style.visibility = 'hidden';
+    document.getElementById('pause_btn').value = '再開する';
+  } else {
+    //再開
+    document.getElementById('room_thread').style.visibility = 'visible';
+    document.getElementById('message').style.visibility = 'visible';
+    document.getElementById('submit_btn').style.visibility = 'visible';
+    document.getElementById('pause_btn').value = '休止する';
+  }
+}
 
 // メモを画面上に表示する
+var date = new Date();
 function memo() {
     // ユーザ名を取得
     const userName = $('#userName').val();
