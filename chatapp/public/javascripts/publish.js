@@ -46,13 +46,16 @@ function publish() {
 /////aoaajfaeijfia
 // サーバから受信した投稿メッセージを画面上に表示する
 socket.on('receiveMessageEvent', function (data) {
+  //data分解
   const userName = data[0];
   const message = data[1];
   const send_time = data[2];
 
   if(userName == getValueN()){
+    //自分の投稿
     $('#thread').prepend(' <div class="room_message message_right">'+ userName +'＠'+ send_time +'<div class="message_box"><div class="message_content">'+ message +'</div></div></div><div class="message_clear"></div>');
   }else{
+    //他人の投稿
     $('#thread').prepend(' <div class="room_message message_left">'+ userName +'＠'+ send_time +'<div class="message_box"><div class="message_content">'+ message +'</div></div></div><div class="message_clear"></div>');
   }
 });

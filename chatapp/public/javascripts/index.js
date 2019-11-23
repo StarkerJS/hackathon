@@ -1,4 +1,5 @@
 'use strict';
+//Push機能許可リクエスト
 Push.Permission.request();
 // チャットルームに入室する
 function enter() {

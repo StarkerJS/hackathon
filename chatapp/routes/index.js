@@ -1,5 +1,4 @@
 'use strict';
-//Push.Permission.request();
 const express = require('express');
 const router = express.Router();
 
