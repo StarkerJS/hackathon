@@ -1,18 +1,18 @@
+<br/>
 <div class="container">
   <div class="card">
-      <h1 class="card-header">Node Chat</h1>
-  </div>
-    <!--<div class="row">-->
-        <form method="post" action="/">
-            <div class="room-login_user">
-                ログインユーザ：{{userName}}さん
-                <input id="userName" type="hidden" value={{userName}}>
-            </div>
-            <div class="container">
-                <div class="thread_container">
-                  <div id="room_thread">
-                    <div id="thread">
-<!--メッセージ左側の処理例
+        <h1 class="card-header">Node Chat</h1>
+    <form method="post" action="/">
+        <div class="room-login_user">
+            ログインユーザ：{{userName}}さん
+            <input id="userName" type="hidden" value={{userName}}>
+            <input id="idCode" type="hidden">
+            <input id="idColor" type="hidden">
+        </div>
+        <div class="thread_container">
+            <div id="room_thread">
+                <div id="thread">
+                    <!--メッセージ左側の処理例
                         <div class="room_message message_left">
                             <div class="message_box">
                                 <div class="message_content">
@@ -25,7 +25,7 @@
                         <div class="message_clear">
                         </div>
 -->
-<!--メッセージ右側の処理例
+                    <!--メッセージ右側の処理例
                         <div class="room_message message_right">
                             <div class="message_box">
                                 <div class="message_content">
@@ -38,22 +38,24 @@
                         <div class="message_clear">
                         </div>
 -->
-                    </div>
-                    </div>
-          </div>
-
-          <div class="card-footer">
-              <div class="room-message">
-                  <textarea id="message" rows="4" class="room-message_textarea" placeholder="投稿文を入力してください"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <div class="room-message">
+                <textarea id="message" rows="4" class="room-message_textarea" placeholder="投稿文を入力してください"></textarea>
+                <p/>
+            </div>
+            <div class="room-submit">
+                <input type="button" value="退室する" class="btn btn-outline-danger room-exit_button" onclick="exit();">
+              <div class="float-right">
+                <input type="button" value="メモ" class="btn btn-outline-secondary room-memo_button" onclick="memo();">
+                <input type="button" value="投稿" class="btn btn-outline-warning room-publish_button" onclick="publish();">
               </div>
-              <div class="room-submit">
-                  <input type="button" value="投稿" class="common-button room-publish_button" onclick="publish();">
-                  <input type="button" value="メモ" class="common-button room-memo_button" onclick="memo();">
-                  <input type="button" value="退室する" class="common-button room-exit_button" onclick="exit();">
-              </div>
-          </div>
-          </div>
-        </form>
+            </div>
+        </div>
+    </form>
+  </div>
 </div>
 <script src="/javascripts/socket.js"></script>
 <script src="/javascripts/enter.js"></script>

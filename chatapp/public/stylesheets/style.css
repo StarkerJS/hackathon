@@ -133,15 +133,10 @@ div {
 
 }
 
-.container {
-    height: 450px;
-    width: 100%;
-}
-
 .thread_container {
-    height: 100%;
-    width: 100%;
-    background-color: #eee;
+  height: 450px;
+  width: 100%;
+  background-color: #eee;
 }
 
 .message_box{
@@ -164,7 +159,7 @@ div {
 .message_left .message_box {
     color: #333;
     background: #fff;
-    border: 2px solid #fd7e00;
+/*  border: 2px solid #fd7e00;*/
     border-radius: 15px 15px 15px 0px;
     margin-right: 50px;
 }
@@ -178,7 +173,7 @@ div {
 .message_right .message_box {
       color: #fff;
       background: #fd7e00;
-      border: 2px solid #fd7e00;
+/*    border: 2px solid #fd7e00;*/
       border-radius: 15px 15px 0px 15px;
       margin-left: 50px;
 }
