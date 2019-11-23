@@ -10,8 +10,10 @@ function memo() {
     //const message = $('#message').val();
 
     // 入力されたメッセージを取得
-    const message = getValueM();
+    const message = getValueM()
     // メモの内容を表示
-    $('#thread').prepend(' <div class="room_message message_right">'+ userName +'＠'+ send_time +'<div class="memo_box"><div class="message_content">'+ message +'</div></div></div><div class="message_clear"></div>');
-    return false;
+    if(message){
+      $('#thread').prepend(' <div class="room_message message_right">'+ userName +'＠'+ send_time +'<div class="memo_box"><div class="message_content">'+ message +'</div></div></div><div class="message_clear"></div>');
+      return false;
+   }
 }

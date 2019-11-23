@@ -10,12 +10,15 @@ function getValueN() {
 }
 
 function getValueM() {
-    const textMValue = $('#message').val();
-    console.log('クライアントの入力値：' + textMValue);
-    if(textMValue !== ""){
+    const message = $('#message').val();
+    console.log('クライアントの入力値：' + message);
+    if(message !== ""){
+      //replace 改行コード⇒＜br＞
+      const replace_message = message.replace(/\r\n|\r|\n/g, '<br>');
+      console.log('改行⇒〈br〉：'+ replace_message);
       //textareaを空にする
       $('#message').val("");
-      return textMValue;
+      return replace_message;
     }else{
       alert("文字を入力してください。")
       return false;
