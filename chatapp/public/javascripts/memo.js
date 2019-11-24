@@ -7,13 +7,13 @@ function pause(){
     document.getElementById('room_thread').style.visibility = 'hidden';
     document.getElementById('message').style.visibility = 'hidden';
     document.getElementById('submit_btn').style.visibility = 'hidden';
-    document.getElementById('pause_btn').value = '再開する';
+    document.getElementById('pause_btn').value = '再開';
   } else {
     //再開
     document.getElementById('room_thread').style.visibility = 'visible';
     document.getElementById('message').style.visibility = 'visible';
     document.getElementById('submit_btn').style.visibility = 'visible';
-    document.getElementById('pause_btn').value = '休止する';
+    document.getElementById('pause_btn').value = '休止';
   }
 }
 
