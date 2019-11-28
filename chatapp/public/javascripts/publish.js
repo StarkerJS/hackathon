@@ -17,7 +17,7 @@ function getValueN() {
 }
 
 function getValueM() {
-    const message = $('#message').val();
+    const message = $('#message').val().trim();
     console.log('クライアントの入力値：' + message);
     if(message !== ""){
       //replace 改行コード⇒＜br＞
@@ -27,7 +27,8 @@ function getValueM() {
       $('#message').val("");
       return replace_message;
     }else{
-      alert("文字を入力してください。")
+      alert("文字を入力してください。");
+      $('#message').val("");
       return false;
     }
 }
