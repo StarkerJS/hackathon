@@ -31,9 +31,28 @@ function getValueM() {
       return false;
     }
 }
+/*
+//message入力時に発火
+document.getElementById('message').addEventListener('keyup',function typingpublish() {
+  // ユーザ名を取得
+  const userName = getValueN();
+  // 入力されたメッセージを取得
+  const message = '入力中・・・';
+  //現在時刻を取得
+  const send_time = date.getMonth()+1 +'/' + date.getDate() + ' '+date.getHours() +':'+ date.getMinutes();
+  // 投稿内容を送信
+  if(message){
+    const nameMessage = [userName,message,send_time,sendidCode,sendidColor];
+    console.log(nameMessage);
+    socket.emit('sendMessageEvent', nameMessage);
+    return false;
+  }
+}
+*/
 
 // 投稿メッセージをサーバに送信する
 function publish() {
+    //socket.emit('typedMessageEvent');
     // ユーザ名を取得
     const userName = getValueN();
     // 入力されたメッセージを取得
@@ -48,6 +67,7 @@ function publish() {
       return false;
     }
 }
+
 // サーバから受信した投稿メッセージを画面上に表示する
 socket.on('receiveMessageEvent', function (data) {
   //data分解
@@ -60,9 +80,25 @@ socket.on('receiveMessageEvent', function (data) {
   //id照合
   if(idCode == sendidCode){
     //自分の投稿
-    $('#thread').prepend(' <div class="room_message message_right">'+ userName +'＠'+ send_time +'<div class="message_box" style="border: 2px solid '+ idColor +';"><div class="message_content">'+ message +'</div></div></div><div class="message_clear"></div>');
+    $('#thread').prepend('<div class="room_message message_right">'+ userName +'＠'+ send_time +'<div class="message_box" style="border: 2px solid '+ idColor +';"><div class="message_content">'+ message +'</div></div></div><div class="message_clear"></div>');
   }else{
     //他人の投稿
-    $('#thread').prepend(' <div class="room_message message_left">'+ userName +'＠'+ send_time +'<div class="message_box" style="border: 2px solid '+ idColor +';"><div class="message_content">'+ message +'</div></div></div><div class="message_clear"></div>');
+    $('#thread').prepend('<div class="room_message message_left">'+ userName +'＠'+ send_time +'<div class="message_box" style="border: 2px solid '+ idColor +';"><div class="message_content">'+ message +'</div></div></div><div class="message_clear"></div>');
   }
 });
+/*
+socket.on('typingMessageEvent', function(data){
+  //data分解
+  const userName = data[0];
+  const message = data[1];
+  const send_time = data[2];
+  const idCode = data[3];
+  const idColor = data[4];
+  console.log(userName,message,send_time,idCode,idColor);
+  document.getElementById('thread').innerHTML ='<div class="room_message message_right">'+ userName +'＠'+ send_time +'<div class="message_box" style="border: 2px solid '+ idColor +';"><div class="message_content">'+ message +'</div></div></div><div class="message_clear"></div>'
+});
+
+socket.on('typedMessageEvent', function(){
+	document.getElementById('thread').innerHTML = '';
+});
+*/
