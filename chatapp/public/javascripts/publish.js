@@ -80,10 +80,10 @@ socket.on('receiveMessageEvent', function (data) {
   //id照合
   if(idCode == sendidCode){
     //自分の投稿
-    $('#thread').prepend('<div class="room_message message_right">'+ userName +'＠'+ send_time +'<div class="message_box" style="border: 2px solid '+ idColor +';"><div class="message_content">'+ message +'</div></div></div><div class="message_clear"></div>');
+    $('#thread').prepend('<div class="message_container_right">'+ userName +'＠'+ send_time +'</div><div class="room_message message_right"><div class="message_box" style="border: 2px solid '+ idColor +';"><div class="message_content">'+message+'</div></div></div><div class="message_clear"></div>');
   }else{
     //他人の投稿
-    $('#thread').prepend('<div class="room_message message_left">'+ userName +'＠'+ send_time +'<div class="message_box" style="border: 2px solid '+ idColor +';"><div class="message_content">'+ message +'</div></div></div><div class="message_clear"></div>');
+    $('#thread').prepend('<div class="message_container_left">'+ userName +'＠'+ send_time +'</div><div class="room_message message_left"><div class="message_box" style="border: 2px solid '+ idColor +';"><div class="message_content">'+message+'</div></div></div><div class="message_clear"></div>');
   }
 });
 /*
