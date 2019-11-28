@@ -1,5 +1,4 @@
 'use strict';
-//Push機能許可リクエスト
 Push.Permission.request();
 // チャットルームに入室する
 function enter() {
@@ -17,7 +16,7 @@ function enter() {
       alert('ユーザ名を入力してください。');
     }
 }
-
+///a
 function check_pass(){
   //Passwordの設定
   const roomPass = 'rks';
